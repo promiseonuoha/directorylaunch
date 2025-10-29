@@ -1,13 +1,12 @@
 [
   {
-    "title": "Pricing",
-    "url": "/pricing"
-  },
-  {
     "title": "Categories",
     "url": "/categories"
   },
-
+  {
+    "title": "Pricing",
+    "url": "/pricing"
+  },
   {
     "title": "Contact",
     "url": "/contact"
