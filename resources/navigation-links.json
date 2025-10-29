@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Pricing",
+    "url": "/pricing"
+  },
+  {
+    "title": "Categories",
+    "url": "/categories"
+  },
+
+  {
+    "title": "Contact",
+    "url": "/contact"
+  },
+  {
+    "title": "Submit Project",
+    "url": "#"
+  }
+]
