@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Sofia_Sans } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const sofia_sans = Sofia_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sofia_sans",
+  variable: "--font-inter",
   weight: ["300", "400", "500", "600", "700"],
 });
 
@@ -33,15 +33,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${sofia_sans.variable} bg-[rgba(249,250,251)] antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} bg-white antialiased`}
       >
         <Navbar />
-        <div className="w-full flex flex-col items-center pt-12 px-6">
-          <div className="max-w-[1100px] w-full">{children}</div>
-          <div className="max-w-[1100px] w-full">
-            <Footer />
-          </div>
+        <div className="w-full flex flex-col items-center px-6">
+          <div className="max-w-[1276px] w-full">{children}</div>
         </div>
+        <Footer />
       </body>
     </html>
   );

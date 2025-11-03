@@ -4,31 +4,37 @@ import { Button } from "../ui/button";
 
 export default function Navbar() {
   return (
-    <nav className="w-full bg-white border-b h-16 px-6 flex justify-center border-[#e5e5e5]">
-      <div className="w-full h-full max-w-[1100px] flex justify-between items-center">
-        <Link href="/">
-          <h1 className="font-semibold text-xl">Launchlistr</h1>
-        </Link>
-        <div className="flex items-center gap-5">
-          {links.map((link, index) => (
-            <Link
-              href={link.url}
-              key={index}
-              className="text-sm primary-link-hover font-medium"
-            >
-              {link.title}
-            </Link>
-          ))}
-        </div>
-        <div className="flex items-center gap-3">
-          <Link href="" className="text-sm primary-link-hover font-medium">
-            Login
+    <nav className="w-full bg-white border-b h-[70px] px-6 flex justify-center border-[#E1E3EA]">
+      <div className="w-full h-full max-w-[1276px] flex justify-between items-center">
+        <div className="flex items-center gap-20">
+          <Link href="/" className="flex gap-2 items-center">
+            <div className="w-8 h-8 rounded-full bg-[#D9D9D9]" />
+            <h1 className="font-bold text-xl">Logo</h1>
           </Link>
+          <div className="flex items-center gap-5">
+            {links.map((link, index) => (
+              <Link
+                href={link.url}
+                key={index}
+                className="text-base text-black/70 font-semibold"
+              >
+                {link.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="flex items-center gap-3.5">
           <Button
             variant="default"
-            className="rounded-full hover:opacity-80 cursor-pointer px-4"
+            className="bg-primary-color text-base font-semibold hover:bg-primary-color/80 cursor-pointer"
           >
-            Sign Up
+            Submit a Product
+          </Button>
+          <Button
+            variant="default"
+            className="bg-black px-4 text-base font-semibold hover:bg-black/80 cursor-pointer"
+          >
+            Sign In
           </Button>
         </div>
       </div>

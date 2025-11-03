@@ -1,18 +1,14 @@
 [
   {
+    "title": "Explore",
+    "url": "#"
+  },
+  {
     "title": "Categories",
     "url": "/categories"
   },
   {
     "title": "Pricing",
     "url": "/pricing"
-  },
-  {
-    "title": "Contact",
-    "url": "/contact"
-  },
-  {
-    "title": "Submit Project",
-    "url": "#"
   }
 ]

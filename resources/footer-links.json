@@ -1,0 +1,89 @@
+[
+  {
+    "label": "Top Tools",
+    "links": [
+      {
+        "path": "",
+        "name": "Productivity Tools"
+      },
+      {
+        "path": "",
+        "name": "Image Generators"
+      },
+      {
+        "path": "",
+        "name": "Text Generators"
+      },
+      {
+        "path": "",
+        "name": "Video Tools"
+      },
+      {
+        "path": "",
+        "name": "Art Generators"
+      },
+      {
+        "path": "",
+        "name": "All AI Tools"
+      }
+    ]
+  },
+  {
+    "label": "Company",
+    "links": [
+      {
+        "path": "",
+        "name": "About"
+      },
+      {
+        "path": "",
+        "name": "Contact"
+      },
+      {
+        "path": "",
+        "name": "Privacy Policy"
+      },
+      {
+        "path": "",
+        "name": "Terms"
+      },
+      {
+        "path": "/payment-plan",
+        "name": "Submit a Tool"
+      },
+      {
+        "path": "",
+        "name": "Update a Tool"
+      }
+    ]
+  },
+  {
+    "label": "Resources",
+    "links": [
+      {
+        "path": "/blog",
+        "name": "Blogs"
+      },
+      {
+        "path": "/blog",
+        "name": "News"
+      },
+      {
+        "path": "",
+        "name": "Cookies"
+      },
+      {
+        "path": "",
+        "name": "Licenses"
+      },
+      {
+        "path": "",
+        "name": "Settings"
+      },
+      {
+        "path": "",
+        "name": "Contact"
+      }
+    ]
+  }
+]
