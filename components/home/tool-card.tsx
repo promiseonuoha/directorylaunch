@@ -11,6 +11,7 @@ interface Props {
     votes: number;
     commentCount: number;
     categories: string[];
+    slug: string;
   };
 }
 
@@ -20,7 +21,10 @@ export default function ToolCard(props: Props) {
     <div className="duration-200 rounded-2xl p-6 hover:bg-[#F7F7FE] group">
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-3 flex-1">
-          <Link href="#" className="flex items-start gap-6 flex-1">
+          <Link
+            href={`/product/${tool.slug}`}
+            className="flex items-start gap-6 flex-1"
+          >
             <Image
               src={tool.image}
               alt={tool.name}

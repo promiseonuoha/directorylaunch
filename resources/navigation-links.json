@@ -1,14 +1,14 @@
 [
   {
-    "title": "Explore",
-    "url": "#"
-  },
-  {
     "title": "Categories",
     "url": "/categories"
   },
   {
-    "title": "Pricing",
-    "url": "/pricing"
+    "title": "How It Works",
+    "url": "#"
+  },
+  {
+    "title": "Get Featured",
+    "url": "#"
   }
 ]

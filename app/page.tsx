@@ -1,9 +1,9 @@
-import BecomeSponsor from "@/components/home/become-sponsor";
+// import BecomeSponsor from "@/components/home/become-sponsor";
 import TopCategories from "@/components/home/categories";
 import NextLaunch from "@/components/home/next-launch";
 import RecommendedTools from "@/components/home/recommended-tools";
 import RenderToolsByCategory from "@/components/home/render-tools-by-category";
-import Sponsors from "@/components/home/sponsors";
+// import Sponsors from "@/components/home/sponsors";
 import Statistics from "@/components/home/statistics";
 import {
   InputGroup,
@@ -32,7 +32,7 @@ export default function Home() {
             <InputGroupAddon align="inline-end">0 result</InputGroupAddon>
           </InputGroup>
         </div>
-        <Sponsors />
+        {/* <Sponsors /> */}
         <NextLaunch />
         <div className="pt-8 mb-12 flex flex-col gap-[60px]">
           <RenderToolsByCategory label="Launching Today" tools={tools} />
@@ -50,7 +50,7 @@ export default function Home() {
         <RecommendedTools />
         <Statistics />
         <TopCategories />
-        <BecomeSponsor />
+        {/* <BecomeSponsor /> */}
       </div>
     </div>
   );
@@ -65,5 +65,6 @@ const tools = Array.from({ length: 5 }).map((_, index) => {
     categories: ["SaaS  Email", "SaaS", "Developer Tools"],
     votes: 2381,
     commentCount: 2381,
+    slug: "kepler",
   };
 });

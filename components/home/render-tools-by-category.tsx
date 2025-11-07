@@ -10,6 +10,7 @@ interface Props {
     votes: number;
     commentCount: number;
     categories: string[];
+    slug: string;
   }[];
 }
 
