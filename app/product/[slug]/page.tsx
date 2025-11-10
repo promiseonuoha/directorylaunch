@@ -1,6 +1,6 @@
 import RecommendedTools from "@/components/home/recommended-tools";
 import Comments from "@/components/tool/comments";
-import ToolPreviewCarousel from "@/components/tool/preview-carousel";
+import { ToolPreview } from "@/components/tool/tool-preview";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +28,8 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <ToolPreviewCarousel />
+        {/* <ToolPreviewCarousel /> */}
+        <ToolPreview />
         <div className="w-full mt-11 mb-12 flex justify-center gap-3">
           <button
             type="button"
