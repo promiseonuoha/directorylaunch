@@ -26,16 +26,20 @@ export default function Navbar() {
         <div className="flex items-center gap-3.5">
           <Button
             variant="default"
+            type="button"
             className="bg-primary-color text-base font-semibold hover:bg-primary-color/80 cursor-pointer"
           >
             Submit a Product
           </Button>
-          <Button
-            variant="default"
-            className="bg-black px-4 text-base font-semibold hover:bg-black/80 cursor-pointer"
+          <Link
+            href="/login"
+            style={{
+              borderRadius: "8px",
+            }}
+            className="bg-black text-white h-9 flex justify-center items-center px-4 text-base font-semibold hover:bg-black/80 cursor-pointer"
           >
             Sign In
-          </Button>
+          </Link>
         </div>
       </div>
     </nav>

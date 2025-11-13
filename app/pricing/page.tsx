@@ -15,10 +15,12 @@ export default function Page() {
         {reasons.map((reason, index) => (
           <div
             key={index}
-            className="col-span-1 rounded-xl border border-[#E4E4F6] pt-[26px] pb-6 flex flex-col gap-2 items-center"
+            className="col-span-1 rounded-xl border border-[#E4E4F6] py-[26px] flex flex-col gap-2 items-center"
           >
             <h1 className="font-bold text-[32px]">{reason.value}</h1>
-            <p className="text-black/80 text-base">{reason.label}</p>
+            <p className="text-black/80 text-base text-center px-2.5">
+              {reason.label}
+            </p>
           </div>
         ))}
       </div>
@@ -60,20 +62,20 @@ export default function Page() {
 
 const reasons = [
   {
-    value: "10,500",
-    label: "Clicks on products per month",
+    value: "Only 15",
+    label: "Products featured weekly for meaningful discovery",
   },
   {
-    value: "10,500",
-    label: "Clicks on products per month",
+    value: "7",
+    label: "Weekly votes per user to support your product",
   },
   {
-    value: "10,500",
-    label: "Clicks on products per month",
+    value: "100% organic",
+    label: "Quality over quantity — no noise, genuine engagement",
   },
   {
-    value: "10,500",
-    label: "Clicks on products per month",
+    value: "Live",
+    label: "Real-time analytics and community feedback",
   },
 ];
 
@@ -85,8 +87,10 @@ const packages = [
     summary: "Get premium visibility for your product for a full week.",
     price: "$29",
     benefits: [
-      "Get premium visibility for your product for a full week.",
-      "Do-follow backlink forever",
+      "Be one of only 15 products featured this week — stand out from the crowd",
+      "Receive a dedicated “Launch Badge” and a do-follow backlink that stays live forever",
+      "Get access to live analytics so you can track clicks, and votes in real time",
+      "Tap into our built-in community: each user gets 7 votes each week and votes are randomized so it’s fair",
     ],
   },
   {
@@ -96,8 +100,10 @@ const packages = [
     summary: "Get premium visibility for your product for a full month.",
     price: "$99",
     benefits: [
-      "Get premium visibility for your product for a full month.",
-      "Do-follow backlink forever",
+      "Enjoy extended premium placement for four weeks — maximum discoverability",
+      "Keep your “Winner” badge and backlink visible indefinitely, boosting SEO and credibility",
+      "Access detailed weekly reports, growth trends and engagement insights",
+      "Leverage our engaged maker community with sustained voting and support over the month",
     ],
   },
 ];

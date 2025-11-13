@@ -1,118 +1,107 @@
+import RenderToolsByCategory from "@/components/home/render-tools-by-category";
 import Link from "next/link";
 
-export default function Page() {
+interface PageProps {
+  searchParams: Promise<{
+    category?: string;
+  }>;
+}
+
+export default async function Page({ searchParams }: PageProps) {
+  const params = await searchParams;
+  const selectedCategory = params?.category;
+
   return (
-    <div className="w-full">
-      <div className="max-w-5xl mx-auto px-4">
-        <h1 className="text-3xl font-outfit font-bold tracking-tight">
-          Categories
-        </h1>
-        <p className="mt-2 text-lg text-gray-600">Browse tools by category</p>
-      </div>
-      <div className="max-w-5xl mx-auto mt-8 px-4">
-        <div className="flex flex-row-reverse gap-8">
-          <div className="flex-1">
-            <div className="space-y-8">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <Link
-                  href="?category=Analytics"
-                  className="block p-4 rounded-xl border transition-all bg-white hover:border-gray-300 border-gray-100"
-                >
-                  <h3 className="font-outfit font-semibold mb-1">Analytics</h3>
-                  <p className="text-sm text-gray-500">31 products</p>
-                </Link>
-                <Link
-                  href="?category=API%20Tools"
-                  className="block p-4 rounded-xl border transition-all bg-white hover:border-gray-300 border-gray-100"
-                >
-                  <h3 className="font-outfit font-semibold mb-1">API Tools</h3>
-                  <p className="text-sm text-gray-500">35 products</p>
-                </Link>
-                <Link
-                  href="?category=Art%20%26%20Design"
-                  className="block p-4 rounded-xl border transition-all bg-white hover:border-gray-300 border-gray-100"
-                >
-                  <h3 className="font-outfit font-semibold mb-1">
-                    Art &amp; Design
-                  </h3>
-                  <p className="text-sm text-gray-500">73 products</p>
-                </Link>
-                <Link
-                  href="?category=Artificial%20Intelligence"
-                  className="block p-4 rounded-xl border transition-all bg-white hover:border-gray-300 border-gray-100"
-                >
-                  <h3 className="font-outfit font-semibold mb-1">
-                    Artificial Intelligence
-                  </h3>
-                  <p className="text-sm text-gray-500">226 products</p>
-                </Link>
-                <Link
-                  href="?category=Authentication"
-                  className="block p-4 rounded-xl border transition-all bg-white hover:border-gray-300 border-gray-100"
-                >
-                  <h3 className="font-outfit font-semibold mb-1">
-                    Authentication
-                  </h3>
-                  <p className="text-sm text-gray-500">6 products</p>
-                </Link>
-                <Link
-                  href="?category=Blockchain"
-                  className="block p-4 rounded-xl border transition-all bg-white hover:border-gray-300 border-gray-100"
-                >
-                  <h3 className="font-outfit font-semibold mb-1">Blockchain</h3>
-                  <p className="text-sm text-gray-500">1 product</p>
-                </Link>
-                <Link
-                  href="?category=Books"
-                  className="block p-4 rounded-xl border transition-all bg-white hover:border-gray-300 border-gray-100"
-                >
-                  <h3 className="font-outfit font-semibold mb-1">Books</h3>
-                  <p className="text-sm text-gray-500">6 products</p>
-                </Link>
-                <Link
-                  href="?category=Bots"
-                  className="block p-4 rounded-xl border transition-all bg-white hover:border-gray-300 border-gray-100"
-                >
-                  <h3 className="font-outfit font-semibold mb-1">Bots</h3>
-                  <p className="text-sm text-gray-500">4 products</p>
-                </Link>
-                <Link
-                  href="?category=Business%20Tools"
-                  className="block p-4 rounded-xl border transition-all bg-white hover:border-gray-300 border-gray-100"
-                >
-                  <h3 className="font-outfit font-semibold mb-1">
-                    Business Tools
-                  </h3>
-                  <p className="text-sm text-gray-500">102 products</p>
-                </Link>
-                <Link
-                  href="?category=Calendar"
-                  className="block p-4 rounded-xl border transition-all bg-white hover:border-gray-300 border-gray-100"
-                >
-                  <h3 className="font-outfit font-semibold mb-1">Calendar</h3>
-                  <p className="text-sm text-gray-500">5 products</p>
-                </Link>
-                <Link
-                  href="?category=Chat"
-                  className="block p-4 rounded-xl border transition-all bg-white hover:border-gray-300 border-gray-100"
-                >
-                  <h3 className="font-outfit font-semibold mb-1">Chat</h3>
-                  <p className="text-sm text-gray-500">19 products</p>
-                </Link>
-                <Link
-                  href="?category=Chrome%20Extensions"
-                  className="block p-4 rounded-xl border transition-all bg-white hover:border-gray-300 border-gray-100"
-                >
-                  <h3 className="font-outfit font-semibold mb-1">
-                    Chrome Extensions
-                  </h3>
-                  <p className="text-sm text-gray-500">17 products</p>
-                </Link>
-              </div>{" "}
-            </div>
+    <div className="w-full pt-[60px] pb-[90px] flex flex-col items-center">
+      <h1 className="font-semibold text-[28px] text-center mb-3">Categories</h1>
+      <p className="text-center font-medium text-base text-black/70 mb-12">
+        Find Products By Category, select a category to get started.
+      </p>
+
+      <div className="w-full flex gap-8">
+        <div className="w-full">
+          <div className="flex flex-col gap-[60px]">
+            <RenderToolsByCategory
+              label={
+                selectedCategory
+                  ? `${selectedCategory} Products`
+                  : "Showing all products"
+              }
+              tools={tools}
+            />
           </div>
+        </div>
+
+        <div className="min-w-[550px] w-[550px] grid grid-cols-2 gap-5">
+          {categories.map((cat, index) => {
+            const isActive = cat.title === selectedCategory;
+            return (
+              <Link
+                key={index}
+                href={`?category=${encodeURIComponent(cat.title)}`}
+                className={`block h-max p-4 rounded-xl border transition-all bg-white hover:border-gray-300 ${
+                  isActive ? "border-black bg-gray-50" : "border-gray-100"
+                }`}
+              >
+                <h3 className="font-outfit font-semibold mb-1">{cat.title}</h3>
+                <p className="text-sm text-gray-500">{cat.products} products</p>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>
   );
 }
+
+const tools = Array.from({ length: 15 }).map((_, index) => ({
+  id: "Tool" + index,
+  image: "/svg/kepler-logo.svg",
+  name: "Kepler Skills Insights",
+  description: "The all-in-one platform for workforce skills",
+  categories: ["SaaS", "Email", "Developer Tools"],
+  votes: 2381,
+  commentCount: 2381,
+  slug: "kepler",
+}));
+
+const categories = [
+  { title: "Analytics", products: 31 },
+  { title: "API Tools", products: 35 },
+  { title: "Art & Design", products: 73 },
+  { title: "Artificial Intelligence", products: 226 },
+  { title: "Authentication", products: 6 },
+  { title: "Blockchain", products: 1 },
+  { title: "Books", products: 6 },
+  { title: "Bots", products: 4 },
+  { title: "Business Tools", products: 102 },
+  { title: "Calendar", products: 5 },
+  { title: "Chat", products: 19 },
+  { title: "Chrome Extensions", products: 17 },
+  { title: "Code Editors", products: 5 },
+  { title: "Collaboration", products: 10 },
+  { title: "Communication", products: 18 },
+  { title: "Content Management", products: 13 },
+  { title: "Crypto", products: 5 },
+  { title: "Customer Success", products: 7 },
+  { title: "Data", products: 20 },
+  { title: "Database", products: 7 },
+  { title: "Design Tools", products: 68 },
+  { title: "Developer Tools", products: 87 },
+  { title: "E-Commerce", products: 17 },
+  { title: "Education", products: 37 },
+  { title: "Email", products: 14 },
+  { title: "Finance", products: 24 },
+  { title: "Fitness", products: 2 },
+  { title: "Food & Drink", products: 4 },
+  { title: "Games", products: 37 },
+  { title: "Health & Fitness", products: 13 },
+  { title: "Home Automation", products: 2 },
+  { title: "Human Resources", products: 16 },
+  { title: "Indie Games", products: 11 },
+  { title: "Internet of Things", products: 3 },
+  { title: "Investing", products: 6 },
+  { title: "Legal", products: 6 },
+  { title: "Lifestyle", products: 29 },
+  { title: "Machine Learning", products: 1 },
+];
