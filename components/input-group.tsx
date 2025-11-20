@@ -53,7 +53,7 @@ export default function InputGroup({
         />
       ) : (
         <textarea
-          className={`w-full mobile:text-xs  text-base font-normal placeholder:text-gray-500 text-gray-700 bg-white border border-gray-300 rounded-xl outline-0 py-2.5 px-3.5 ${
+          className={`w-full mobile:text-xs  text-base font-normal placeholder:text-gray-500 text-gray-700 bg-white border border-[#E4E4F6] rounded-xl outline-0 py-2.5 px-3.5 ${
             shortTextarea ? "h-70" : "h-32"
           }`}
           placeholder={placeholder}

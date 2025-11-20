@@ -40,7 +40,7 @@ export default function Page() {
                 {plan.benefits.map((benefit, index) => {
                   return (
                     <div key={index} className="flex w-full gap-2 items-start">
-                      <Check className="text-[#FF4306] w-6" />
+                      <Check className="text-[#FF4306] min-w-6 w-6 h-6" />
                       <p className="text-base text-black/80">{benefit}</p>
                     </div>
                   );

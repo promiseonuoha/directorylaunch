@@ -1,0 +1,230 @@
+[
+  {
+    "title": "Calendar",
+    "slug": "calendar",
+    "products": 5,
+    "description": "Scheduling tools to manage time and meetings."
+  },
+  {
+    "title": "API Tools",
+    "slug": "api-tools",
+    "products": 35,
+    "description": "Developer utilities for building, testing, and monitoring APIs across different environments."
+  },
+  {
+    "title": "Art & Design",
+    "slug": "art-design",
+    "products": 73,
+    "description": "Creative tools for designers, artists, and illustrators to craft visuals, prototypes, and animations."
+  },
+  {
+    "title": "Artificial Intelligence",
+    "slug": "artificial-intelligence",
+    "products": 226,
+    "description": "AI platforms, assistants, and automation tools."
+  },
+  {
+    "title": "Authentication",
+    "slug": "authentication",
+    "products": 6,
+    "description": "Secure user login and identity systems."
+  },
+  {
+    "title": "Blockchain",
+    "slug": "blockchain",
+    "products": 1,
+    "description": "Apps and infrastructure powered by decentralized networks."
+  },
+  {
+    "title": "Books",
+    "slug": "books",
+    "products": 6,
+    "description": "Reading tools and digital libraries."
+  },
+  {
+    "title": "Bots",
+    "slug": "bots",
+    "products": 4,
+    "description": "Automated agents that handle repetitive tasks or user interactions in chat or workflow systems."
+  },
+  {
+    "title": "Business Tools",
+    "slug": "business-tools",
+    "products": 102,
+    "description": "Software for scaling teams, organizing operations, and improving workflow efficiency."
+  },
+  {
+    "title": "Analytics",
+    "slug": "analytics",
+    "products": 31,
+    "description": "Tools for tracking and insights."
+  },
+  {
+    "title": "Chat",
+    "slug": "chat",
+    "products": 19,
+    "description": "Messaging platforms."
+  },
+  {
+    "title": "Chrome Extensions",
+    "slug": "chrome-extensions",
+    "products": 17,
+    "description": "Enhance the browser with productivity and performance add-ons."
+  },
+  {
+    "title": "Code Editors",
+    "slug": "code-editors",
+    "products": 5,
+    "description": "Development environments for writing and testing code."
+  },
+  {
+    "title": "Collaboration",
+    "slug": "collaboration",
+    "products": 10,
+    "description": "Tools that help teams work together on shared projects, documents, and tasks."
+  },
+  {
+    "title": "Communication",
+    "slug": "communication",
+    "products": 18,
+    "description": "Platforms for calls, messaging, and team announcements."
+  },
+  {
+    "title": "Content Management",
+    "slug": "content-management",
+    "products": 13,
+    "description": "CMS systems for publishing, storing, and managing digital content."
+  },
+  {
+    "title": "Crypto",
+    "slug": "crypto",
+    "products": 5,
+    "description": "Crypto wallets, exchanges, and digital asset tools."
+  },
+  {
+    "title": "Customer Success",
+    "slug": "customer-success",
+    "products": 7,
+    "description": "Platforms designed to help teams support users and improve retention."
+  },
+  {
+    "title": "Data",
+    "slug": "data",
+    "products": 20,
+    "description": "Data processing, visualization, and analysis solutions."
+  },
+  {
+    "title": "Database",
+    "slug": "database",
+    "products": 7,
+    "description": "Database engines, query tools, and structured storage systems."
+  },
+  {
+    "title": "Design Tools",
+    "slug": "design-tools",
+    "products": 68,
+    "description": "UI/UX, prototyping, and layout creation tools for digital designers."
+  },
+  {
+    "title": "Developer Tools",
+    "slug": "developer-tools",
+    "products": 87,
+    "description": "Frameworks, debugging tools, automation, and everything that improves development workflows."
+  },
+  {
+    "title": "E-Commerce",
+    "slug": "e-commerce",
+    "products": 17,
+    "description": "Online store builders, payment systems, and selling tools."
+  },
+  {
+    "title": "Education",
+    "slug": "education",
+    "products": 37,
+    "description": "Learning platforms, courses, study apps, and tutoring tools for students and professionals."
+  },
+  {
+    "title": "Email",
+    "slug": "email",
+    "products": 14,
+    "description": "Email clients, deliverability tools, and automation systems."
+  },
+  {
+    "title": "Finance",
+    "slug": "finance",
+    "products": 24,
+    "description": "Tools for budgeting, accounting, payments, and financial analysis."
+  },
+  {
+    "title": "Fitness",
+    "slug": "fitness",
+    "products": 2,
+    "description": "Apps that support workouts, health tracking, and daily movement."
+  },
+  {
+    "title": "Food & Drink",
+    "slug": "food-drink",
+    "products": 4,
+    "description": "Apps for recipes, food delivery, cooking tips, and restaurant discovery."
+  },
+  {
+    "title": "Games",
+    "slug": "games",
+    "products": 37,
+    "description": "Games across genres."
+  },
+  {
+    "title": "Health & Fitness",
+    "slug": "health-fitness",
+    "products": 13,
+    "description": "Health monitors, wellness platforms, and guided fitness plans."
+  },
+  {
+    "title": "Home Automation",
+    "slug": "home-automation",
+    "products": 2,
+    "description": "Smart home devices, automation tools, and IoT management."
+  },
+  {
+    "title": "Human Resources",
+    "slug": "human-resources",
+    "products": 16,
+    "description": "Hiring platforms, payroll managers, and employee engagement tools."
+  },
+  {
+    "title": "Indie Games",
+    "slug": "indie-games",
+    "products": 11,
+    "description": "Unique, creative, and experimental games made by small teams."
+  },
+  {
+    "title": "Internet of Things",
+    "slug": "internet-of-things",
+    "products": 3,
+    "description": "IoT device networks, monitoring dashboards, and connectivity tools."
+  },
+  {
+    "title": "Investing",
+    "slug": "investing",
+    "products": 6,
+    "description": "Investment apps, trading tools, and portfolio management dashboards."
+  },
+  {
+    "title": "Legal",
+    "slug": "legal",
+    "products": 6,
+    "description": "Legal research, contract drafting, and compliance software."
+  },
+  {
+    "title": "Lifestyle",
+    "slug": "lifestyle",
+    "products": 29,
+    "description": "Daily life tools including habit tracking, planning, and productivity improvement."
+  },
+  {
+    "title": "Machine Learning",
+    "slug": "machine-learning",
+    "products": 1,
+    "description": "ML training tools, data models, and experimentation frameworks."
+  }
+]

@@ -1,8 +1,11 @@
+"use client";
 import Link from "next/link";
 import links from "@/resources/navigation-links.json";
 import { Button } from "../ui/button";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
+  const router = useRouter();
   return (
     <nav className="w-full bg-white border-b h-[70px] px-6 flex justify-center border-[#E1E3EA]">
       <div className="w-full h-full max-w-[1276px] flex justify-between items-center">
@@ -27,6 +30,9 @@ export default function Navbar() {
           <Button
             variant="default"
             type="button"
+            onClick={() => {
+              router.push("/add-product");
+            }}
             className="bg-primary-color text-base font-semibold hover:bg-primary-color/80 cursor-pointer"
           >
             Submit a Product

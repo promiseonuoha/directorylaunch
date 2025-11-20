@@ -1,0 +1,7 @@
+[
+  { "name": "Freemium", "value": "freemium" },
+  { "name": "Free", "value": "free" },
+  { "name": "Paid", "value": "paid" },
+  { "name": "Free Trial", "value": "free-trial" },
+  { "name": "Subscription", "value": "subscription" }
+]
