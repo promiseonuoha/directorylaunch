@@ -1,9 +1,13 @@
 "use client";
 
+import { Checkbox } from "@/components/ui/checkbox";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Page() {
   const router = useRouter();
+  const [addedDirectory, setAddedDirectory] = useState(true);
+  const [promotion, setPromotion] = useState(true);
 
   return (
     <div className="w-full max-w-[1000px] h-max flex flex-col">
@@ -13,6 +17,8 @@ export default function Page() {
           Update your personal profile information
         </p>
       </div>
+
+      {/* Profile Section */}
       <section className="bg-white mb-8 p-6 rounded-2xl shadow-xs border border-gray-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
@@ -34,6 +40,8 @@ export default function Page() {
           </button>
         </div>
       </section>
+
+      {/* Security Section */}
       <section className="mb-8">
         <h2 className="text-xl font-semibold mb-1">Security</h2>
         <p className="text-sm text-gray-600 mb-4">
@@ -57,6 +65,83 @@ export default function Page() {
           </button>
         </div>
       </section>
+
+      {/* Notifications Section */}
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-1">Notifications</h2>
+        <p className="text-sm text-gray-600 mb-4">
+          Customize your notification preferences.
+        </p>
+
+        <div className="p-4 shadow-xs rounded-xl border border-gray-200 flex flex-col gap-6">
+          <div className="w-full flex items-center justify-between">
+            <div>
+              <p className="font-medium">Notification Settings</p>
+              <p className="text-sm text-gray-600">
+                Choose what alerts you want to receive.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <div className="w-max max-w-full cursor-pointer flex items-center gap-2">
+              <Checkbox
+                id="addedDirectory"
+                checked={addedDirectory}
+                onCheckedChange={(v) => {
+                  setAddedDirectory(v as boolean);
+                }}
+              />
+              <label
+                htmlFor="addedDirectory"
+                className="text-sm font-normal text-black/70 "
+              >
+                Get notified by email about newly added product.
+              </label>
+            </div>
+            <div className="w-max max-w-full cursor-pointer flex items-center gap-2">
+              <Checkbox
+                id="promotion"
+                checked={promotion}
+                onCheckedChange={(v) => {
+                  setPromotion(v as boolean);
+                }}
+              />
+              <label
+                htmlFor="promotion"
+                className="text-sm font-normal text-black/70 "
+              >
+                Get notified by email about new promotion.
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Account Deletion Section */}
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-1">Account</h2>
+        <p className="text-sm text-gray-600 mb-4">
+          Options related to account status and deletion.
+        </p>
+
+        <div className="p-4 shadow-xs rounded-xl border border-gray-200 flex items-center justify-between">
+          <div>
+            <p className="font-medium text-red-600">Delete Account</p>
+            <p className="text-sm text-gray-600">
+              Permanently delete your account and all associated data.
+            </p>
+          </div>
+          <button
+            onClick={() => router.push("/delete-account")}
+            className="px-4 py-2 cursor-pointer text-sm border border-red-500 text-red-600 rounded-lg hover:bg-red-50"
+          >
+            Delete
+          </button>
+        </div>
+      </section>
+
+      {/* Session Section */}
       <section>
         <h2 className="text-xl font-semibold mb-1">Session</h2>
         <p className="text-sm text-gray-600 mb-4">

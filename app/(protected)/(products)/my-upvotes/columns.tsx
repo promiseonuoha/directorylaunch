@@ -71,7 +71,27 @@ export const columns: ColumnDef<ToolsCollection | null>[] = [
     header: "Tool",
     cell: ({ row }) => <ToolCell tool={row.original} />,
   },
-
+  {
+    accessorKey: "categories",
+    header: "Category",
+    cell: ({ row }) => {
+      const tool: ToolsCollection | null = row.original;
+      return tool?.status === "published" ? (
+        <p className="max-w-[300px] max-tablet:text-xs max-tablet:max-w-[200px] truncate">
+          {tool.categories.map((cat, index) => {
+            return (
+              <span className="capitalize">
+                {cat}
+                {index !== tool.categories.length - 1 && ", "}
+              </span>
+            );
+          })}
+        </p>
+      ) : (
+        "N/A"
+      );
+    },
+  },
   {
     accessorKey: "number_of_bookmarks",
     header: "Upvote",
