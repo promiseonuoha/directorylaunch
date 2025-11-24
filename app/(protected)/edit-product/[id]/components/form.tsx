@@ -4,15 +4,15 @@ import InputGroup from "@/components/input-group";
 import MultiSelect from "@/components/multi-select";
 import { Button } from "@/components/ui/button";
 import { FormEvent, useMemo, useState } from "react";
-import RichTextGroup from "./richtext-group";
-import PaymentModels from "./payment-models";
-import InputIconGroup from "./input-icon-group";
-import FileUpload from "./file-upload";
 import { cn } from "@/lib/utils";
 import { Category, Tag, UploadedFile } from "@/types/schema";
 import { useNewTool } from "@/contexts/new-tool";
 import { useRouter } from "next/navigation";
-import { TagsInput } from "./tag-input";
+import RichTextGroup from "@/components/add-product/richtext-group";
+import { TagsInput } from "@/components/add-product/tag-input";
+import FileUpload from "@/components/add-product/file-upload";
+import PaymentModels from "@/components/add-product/payment-models";
+import InputIconGroup from "@/components/add-product/input-icon-group";
 
 const options = [
   { id: 1, label: "Analytics" },
@@ -22,7 +22,7 @@ const options = [
   { id: 5, label: "Finance" },
 ];
 
-export default function AddProductForm() {
+export default function EditProductForm() {
   const router = useRouter();
 
   const [name, setName] = useState("");
@@ -93,7 +93,7 @@ export default function AddProductForm() {
       className="w-full max-w-[1000px] h-max flex flex-col"
     >
       <div className="w-full flex flex-col gap-6">
-        <h1 className="font-semibold text-xl">Add a Product</h1>
+        <h1 className="font-semibold text-xl">Edit Product</h1>
         <InputGroup
           large={true}
           id="name"

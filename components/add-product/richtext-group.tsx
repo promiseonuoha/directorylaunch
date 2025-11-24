@@ -21,10 +21,10 @@ export default function RichTextGroup({
   setValue,
 }: Params) {
   return (
-    <div className="w-full flex tablet:gap-0.5 flex-col gap-1.5">
+    <div className="w-full flex max-tablet:gap-0.5 flex-col gap-1.5">
       <div className="flex max-w-full w-max h-max items-start">
         <label
-          className={` font-medium tablet:text-xs text-gray-700 ${
+          className={` font-medium max-tablet:text-xs text-gray-700 ${
             large ? "text-base leading-6" : "text-sm"
           }`}
         >
@@ -43,7 +43,7 @@ export default function RichTextGroup({
       </div>
 
       {guideLine && (
-        <span className="text-sm tablet:text-[10px] font-normal leading-5 text-gray-600">
+        <span className="text-sm max-tablet:text-[10px] font-normal leading-5 text-gray-600">
           {guideLine}
         </span>
       )}

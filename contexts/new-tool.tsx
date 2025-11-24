@@ -1,6 +1,6 @@
 "use client";
 import { NewTool } from "@/types/schema";
-import React, {
+import {
   createContext,
   useContext,
   useState,

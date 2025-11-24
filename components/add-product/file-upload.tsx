@@ -131,7 +131,7 @@ export default function FileUpload({
             placeholder="Enter image URL..."
             value={imageUrl}
             onChange={(e) => setImageUrl(e.target.value)}
-            className="w-full mobile:text-xs shadow-none rounded-xl outline-0 text-base font-normal placeholder:text-gray-500 text-gray-700 h-12 border border-[#E4E4F6] px-3.5"
+            className="w-full max-mobile:text-xs shadow-none rounded-xl outline-0 text-base font-normal placeholder:text-gray-500 text-gray-700 h-12 border border-[#E4E4F6] px-3.5"
           />
           <button
             type="button"

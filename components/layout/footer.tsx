@@ -32,7 +32,7 @@ export default function Footer() {
                         <Link
                           href={link.path}
                           key={link.name}
-                          className="text-gray-600 text-base tablet:text-sm mini:text-xs font-semibold"
+                          className="text-gray-600 text-base max-tablet:text-sm max-mini:text-xs font-semibold"
                         >
                           {link.name}
                         </Link>

@@ -4,6 +4,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --breakpoint-2xl: 1400px;
+  --breakpoint-large: 1440px;
+  --breakpoint-laptop: 1279px;
+  --breakpoint-tablet: 999px;
+  --breakpoint-mobile: 799px;
+  --breakpoint-mini: 499px;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary-color: var(--primary-color);
@@ -43,6 +49,15 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-success700: #027a48;
+  --color-warning50: #fffaeb;
+  --color-success50: #ecfdf3;
+  --color-warning700: #b54708;
+  --color-lightGray: #667085;
+  --color-error700: #b42318;
+  --color-brand700: #6941c6;
+  --color-brand600: #7f56d9;
+  --color-brand50: #f9f5ff;
 }
 
 :root {

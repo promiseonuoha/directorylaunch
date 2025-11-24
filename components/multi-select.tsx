@@ -32,10 +32,10 @@ export default function MultiSelect(props: Props) {
   } = props;
 
   return (
-    <div className="w-full flex flex-col mobile:gap-0.5 gap-1.5">
+    <div className="w-full flex flex-col max-mobile:gap-0.5 gap-1.5">
       <div className="flex w-max h-max items-start">
         <label
-          className={` font-medium mobile:text-xs text-black/70 ${
+          className={` font-medium max-mobile:text-xs text-black/70 ${
             large ? "text-base leading-6" : "text-sm"
           }`}
         >
@@ -43,7 +43,7 @@ export default function MultiSelect(props: Props) {
         </label>
         &nbsp;
         {required && (
-          <span className="text-sm mobile:text-xs text-red-600">*</span>
+          <span className="text-sm max-mobile:text-xs text-red-600">*</span>
         )}
       </div>
       <div className="w-full">
@@ -51,7 +51,7 @@ export default function MultiSelect(props: Props) {
           <div className="relative mt-1">
             <Listbox.Button
               className={cn(
-                "flex w-full items-center justify-between text-left mobile:text-xs shadow-none rounded-xl outline-0 text-base font-normal text-gray-700 h-12 border border-[#E4E4F6] px-3.5",
+                "flex w-full items-center justify-between text-left max-mobile:text-xs shadow-none rounded-xl outline-0 text-base font-normal text-gray-700 h-12 border border-[#E4E4F6] px-3.5",
                 {
                   "text-gray-500": selected.length === 0,
                 }

@@ -9,9 +9,6 @@ export default function Form() {
     bio: "",
     username: "",
     website: "",
-    password: "",
-    passwordConfirm: "",
-    oldPassword: "",
   });
 
   const updateProfile = (newValue: string, label: string) => {
@@ -43,7 +40,7 @@ export default function Form() {
             type="text"
           />
         </div>
-        <div className="w-full mobile:grid-cols-1 mobile:gap-3 grid grid-cols-2 gap-8">
+        <div className="w-full max-mobile:grid-cols-1 max-mobile:gap-3 grid grid-cols-2 gap-8">
           <InputGroup
             large={true}
             id="username"
@@ -85,52 +82,6 @@ export default function Form() {
             Update Profile
           </Button>
         </div>
-
-        <h1 className="font-semibold text-xl"> Change Password</h1>
-
-        <div className="w-full grid mobile:grid-cols-1 mobile:gap-3 grid-cols-2 gap-8">
-          <InputGroup
-            value={profileInfo.password}
-            setValue={(value) => updateProfile(value, "password")}
-            large={true}
-            id="newPassword"
-            label="New password (Optional)"
-            placeholder="New password"
-            required={false}
-            type="password"
-          />
-          <InputGroup
-            value={profileInfo.passwordConfirm}
-            setValue={(value) => updateProfile(value, "passwordConfirm")}
-            large={true}
-            id="confirmPassword"
-            label="Confirm password (Optional)"
-            placeholder="Confirm password"
-            required={false}
-            type="password"
-          />
-        </div>
-        <div className="w-full mobile:grid-cols-1 grid grid-cols-2 gap-8">
-          <InputGroup
-            large={true}
-            id="currentPassword"
-            label="Current password (Optional)"
-            placeholder="Enter Current password"
-            required={false}
-            type="password"
-            value={profileInfo.oldPassword}
-            setValue={(value) => updateProfile(value, "oldPassword")}
-          />
-        </div>
-      </div>
-      <div className="w-full flex justify-start pt-6">
-        <Button
-          variant="default"
-          type="button"
-          className="bg-primary-color text-base font-semibold hover:bg-primary-color/80 cursor-pointer"
-        >
-          Change Password
-        </Button>
       </div>
     </form>
   );

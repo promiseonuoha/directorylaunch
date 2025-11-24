@@ -33,7 +33,7 @@ const MenuBar = () => {
       editorProps: {
         attributes: {
           class:
-            "px-6 z-10 py-4 hide-scrollbar tablet:text-xs text-sm font-normal max-h-[200px] w-full min-h-[200px] placeholder:text-[#00000099] border-[#E5E5E5] overflow-y-auto rounded-b-2xl outline-none border border-t-0 text-[#00000099]",
+            "px-6 z-10 py-4 hide-scrollbar max-tablet:text-xs text-sm font-normal max-h-[200px] w-full min-h-[200px] placeholder:text-[#00000099] border-[#E5E5E5] overflow-y-auto rounded-b-2xl outline-none border border-t-0 text-[#00000099]",
         },
       },
     });
