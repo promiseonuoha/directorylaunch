@@ -15,17 +15,20 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="w-full pt-[60px] flex gap-8">
+    <div className="w-full max-mobile:pt-8 pt-[60px] flex max-tablet:flex-col gap-8">
       <div className="w-full">
-        <div className="w-full pl-7">
-          <h1 className="text-[28px] font-semibold mb-3">
+        <div className="w-full pl-7 max-mobile:pl-2">
+          <h1 className="text-[28px] max-mobile:text-xl font-semibold mb-3">
             A launch platform for your products
           </h1>
-          <p className="text-base font-medium text-black/70">
+          <p className="text-base max-mobile:text-sm font-medium text-black/70">
             Sumit your startup & Grow Fast
           </p>
           <InputGroup className="mt-4 h-12 rounded-2xl border-gray-100 bg-white shadow-none">
-            <InputGroupInput placeholder="Search product" />
+            <InputGroupInput
+              className="max-mobile:text-sm"
+              placeholder="Search product"
+            />
             <InputGroupAddon>
               <Search />
             </InputGroupAddon>
@@ -34,19 +37,19 @@ export default function Home() {
         </div>
         {/* <Sponsors /> */}
         <NextLaunch />
-        <div className="pt-8 mb-12 flex flex-col gap-[60px]">
+        <div className="pt-8 max-mobile:gap-8 mb-12 flex flex-col gap-[60px]">
           <RenderToolsByCategory label="Launching Today" tools={tools} />
           <RenderToolsByCategory label="Launch Yesterday" tools={tools} />
           <RenderToolsByCategory label="Launch in Last month" tools={tools} />
         </div>
         <Link
           href="#"
-          className="w-full text-base mb-20 font-semibold text-black/80 hover:opacity-80 border-2 border-[#E1E3EA] rounded-full flex justify-center items-center h-[50px]"
+          className="w-full text-base max-mobile:text-sm max-mobile:h-12 max-mobile:mb-5 mb-20 font-semibold text-black/80 hover:opacity-80 border-2 border-[#E1E3EA] rounded-full flex justify-center items-center h-[50px]"
         >
           See all of last month launched products
         </Link>
       </div>
-      <div className="min-w-[295px] w-[295px]">
+      <div className="min-w-[295px] max-tablet:min-w-0 max-tablet:w-full w-[295px]">
         <RecommendedTools />
         <Statistics />
         <TopCategories />

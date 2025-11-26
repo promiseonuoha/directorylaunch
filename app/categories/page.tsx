@@ -12,9 +12,11 @@ export default async function Page({ searchParams }: PageProps) {
   const selectedCategory = params?.category;
 
   return (
-    <div className="w-full pt-[60px] pb-[90px] flex flex-col items-center">
-      <h1 className="font-semibold text-[28px] text-center mb-3">Categories</h1>
-      <p className="text-center font-medium text-base text-black/70 mb-12">
+    <div className="w-full max-mobile:pt-8 max-mobile:pb-0 pt-[60px] pb-[90px] flex flex-col items-center">
+      <h1 className="font-semibold max-mobile:text-xl text-[28px] text-center mb-3">
+        Categories
+      </h1>
+      <p className="text-center font-medium max-mobile:text-sm text-base text-black/70 max-mobile:mb-7 mb-12">
         Find Products By Category, select a category to get started.
       </p>
 

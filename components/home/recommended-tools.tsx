@@ -6,18 +6,18 @@ export default function RecommendedTools() {
       <h3 className="text-base font-semibold text-black mb-6">
         Recommended Tools
       </h3>
-      <div className="flex flex-col gap-6">
+      <div className="flex max-tablet:grid max-mini:grid-cols-1 max-mobile:grid-cols-2 grid-cols-3 flex-col gap-6">
         {tools.map((tool) => (
           <div className="w-full" key={tool.id}>
-            <div className="flex mb-2.5 gap-4 items-center">
+            <div className="flex mb-2.5 max-mobile:gap-2 gap-4 items-center">
               <Image
                 src={tool.image}
                 alt={tool.name}
                 width={48}
                 height={48}
-                className="h-12 w-12 rounded-lg object-cover shrink-0"
+                className="h-12 max-mobile:w-8 max-mobile:h-8 max-mobile:rounded w-12 rounded-lg object-cover shrink-0"
               />
-              <h2 className="font-semibold text-base text-black">
+              <h2 className="font-semibold max-mobile:text-sm text-base text-black">
                 {tool.name}
               </h2>
             </div>

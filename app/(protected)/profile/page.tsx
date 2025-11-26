@@ -12,16 +12,18 @@ export default function Page() {
   return (
     <div className="w-full max-w-[1000px] h-max flex flex-col">
       <div className="w-full mb-8">
-        <h1 className="font-semibold text-xl mb-1">Profile</h1>
-        <p className="font-medium text-base text-black/70">
+        <h1 className="font-semibold max-mobile:text-lg text-xl mb-1">
+          Profile
+        </h1>
+        <p className="font-medium max-mobile:text-sm text-base text-black/70">
           Update your personal profile information
         </p>
       </div>
 
       {/* Profile Section */}
-      <section className="bg-white mb-8 p-6 rounded-2xl shadow-xs border border-gray-200">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
+      <section className="bg-white mb-8 max-mobile:p-3.5 p-6 rounded-2xl shadow-xs border border-gray-200">
+        <div className="flex items-center max-mobile:flex-col max-mobile:gap-3 justify-between">
+          <div className="flex max-mobile:w-full items-center gap-4">
             <div className="h-12 w-12 rounded-full bg-primary-color text-white flex items-center justify-center text-lg font-semibold">
               S
             </div>
@@ -34,7 +36,7 @@ export default function Page() {
             onClick={() => {
               router.push("/edit-profile");
             }}
-            className="px-4 cursor-pointer py-2 text-sm border rounded-lg hover:bg-gray-100"
+            className="px-4 max-mobile:w-full cursor-pointer py-2 text-sm border rounded-lg hover:bg-gray-100"
           >
             Edit Profile
           </button>
@@ -43,12 +45,14 @@ export default function Page() {
 
       {/* Security Section */}
       <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-1">Security</h2>
+        <h2 className="text-xl max-mobile:text-lg font-semibold mb-1">
+          Security
+        </h2>
         <p className="text-sm text-gray-600 mb-4">
           Manage your password and account security.
         </p>
 
-        <div className="p-4 rounded-xl border border-gray-200 shadow-xs flex items-center justify-between">
+        <div className="p-4 rounded-xl max-mobile:flex-col max-mobile:gap-3 border border-gray-200 shadow-xs flex items-center justify-between">
           <div>
             <p className="font-medium">Password</p>
             <p className="text-sm text-gray-600">
@@ -59,7 +63,7 @@ export default function Page() {
             onClick={() => {
               router.push("/change-password");
             }}
-            className="px-4 py-2 text-sm cursor-pointer border rounded-lg hover:bg-gray-100 flex items-center gap-2"
+            className="px-4 py-2 max-mobile:w-full max-mobile:justify-center max-mobile:flex text-sm cursor-pointer border rounded-lg hover:bg-gray-100 flex items-center gap-2"
           >
             <span>Change Password</span>
           </button>
@@ -68,7 +72,9 @@ export default function Page() {
 
       {/* Notifications Section */}
       <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-1">Notifications</h2>
+        <h2 className="text-xl max-mobile:text-lg font-semibold mb-1">
+          Notifications
+        </h2>
         <p className="text-sm text-gray-600 mb-4">
           Customize your notification preferences.
         </p>
@@ -120,13 +126,15 @@ export default function Page() {
 
       {/* Account Deletion Section */}
       <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-1">Account</h2>
+        <h2 className="text-xl max-mobile:text-lg font-semibold mb-1">
+          Account
+        </h2>
         <p className="text-sm text-gray-600 mb-4">
           Options related to account status and deletion.
         </p>
 
-        <div className="p-4 shadow-xs rounded-xl border border-gray-200 flex items-center justify-between">
-          <div>
+        <div className="p-4 max-mobile:gap-3 max-mobile:flex-col shadow-xs rounded-xl border border-gray-200 flex items-center justify-between">
+          <div className="max-mobile:w-full">
             <p className="font-medium text-red-600">Delete Account</p>
             <p className="text-sm text-gray-600">
               Permanently delete your account and all associated data.
@@ -134,7 +142,7 @@ export default function Page() {
           </div>
           <button
             onClick={() => router.push("/delete-account")}
-            className="px-4 py-2 cursor-pointer text-sm border border-red-500 text-red-600 rounded-lg hover:bg-red-50"
+            className="px-4 max-mobile:w-full py-2 cursor-pointer text-sm border border-red-500 text-red-600 rounded-lg hover:bg-red-50"
           >
             Delete
           </button>
@@ -143,19 +151,21 @@ export default function Page() {
 
       {/* Session Section */}
       <section>
-        <h2 className="text-xl font-semibold mb-1">Session</h2>
+        <h2 className="text-xl max-mobile:text-lg font-semibold mb-1">
+          Session
+        </h2>
         <p className="text-sm text-gray-600 mb-4">
           Manage your current session and sign out.
         </p>
 
-        <div className="p-4 shadow-xs rounded-xl border border-gray-200 flex items-center justify-between">
-          <div>
+        <div className="p-4 max-mobile:flex-col max-mobile:gap-3 shadow-xs rounded-xl border border-gray-200 flex items-center justify-between">
+          <div className="max-mobile:w-full">
             <p className="font-medium">Current Session</p>
             <p className="text-sm text-gray-600">
               Sign out from your current session.
             </p>
           </div>
-          <button className="px-4 py-2 cursor-pointer text-sm bg-primary-color text-white rounded-lg hover:opacity-80">
+          <button className="px-4 max-mobile:w-full py-2 cursor-pointer text-sm bg-primary-color text-white rounded-lg hover:opacity-80">
             Sign Out
           </button>
         </div>

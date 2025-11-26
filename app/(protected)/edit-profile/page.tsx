@@ -27,7 +27,9 @@ export default function Form() {
       className="w-full max-w-[1000px] h-max flex flex-col"
     >
       <div className="w-full flex flex-col gap-6">
-        <h1 className="font-semibold text-xl">Edit Profile Details</h1>
+        <h1 className="font-semibold max-mobile:text-lg text-xl">
+          Edit Profile Details
+        </h1>
         <div className="w-full grid grid-cols-1 gap-8">
           <InputGroup
             large={true}

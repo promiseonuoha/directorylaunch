@@ -7,33 +7,33 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="w-full py-16 flex gap-8">
+    <div className="w-full py-16 max-mobile:pt-8 max-tablet:pb-0 flex max-tablet:flex-col gap-8">
       <div className="w-full">
-        <div className="flex items-start mb-8 gap-6 flex-1">
+        <div className="flex items-start max-mobile:gap-3 mb-8 gap-6 flex-1">
           <Image
             src="/svg/kepler-logo.svg"
             alt="Kepler Skills Insights"
             width={60}
             height={60}
-            className="h-[60px] w-[60px] rounded-lg object-cover shrink-0"
+            className="h-[60px] max-mobile:w-8 max-mobile:h-8 max-mobile:rounded-md w-[60px] rounded-lg object-cover shrink-0"
           />
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col max-mobile:gap-1 gap-2">
             <div className="flex items-center gap-2">
-              <h3 className="font-semibold text-2xl text-black">
+              <h3 className="font-semibold max-mobile:text-lg text-2xl text-black">
                 Kepler Skills Insights
               </h3>
             </div>
-            <p className="text-base text-black/80">
+            <p className="text-base max-mobile:text-sm text-black/80">
               The all-in-one platform for workforce skills
             </p>
           </div>
         </div>
         {/* <ToolPreviewCarousel /> */}
         <ToolPreview />
-        <div className="w-full mt-11 mb-12 flex justify-center gap-3">
+        <div className="w-full max-mini:grid grid-cols-2 mt-11 mb-12 flex justify-center gap-3">
           <button
             type="button"
-            className="flex hover:border-[#FF4306] duration-200 font-semibold text-sm items-center justify-center gap-2 h-11 w-[186px] rounded-xl cursor-pointer border-2 border-[#E1E3EA]"
+            className="flex col-span-1 max-mini:w-full hover:border-[#FF4306] duration-200 font-semibold text-sm items-center justify-center gap-2 h-11 w-[186px] rounded-xl cursor-pointer border-2 border-[#E1E3EA]"
           >
             <Image
               src="/svg/thumbs-up.svg"
@@ -45,7 +45,7 @@ export default function Page() {
           </button>
           <button
             type="button"
-            className="flex hover:border-[#FF4306] duration-200 font-semibold text-sm items-center justify-center gap-2 h-11 w-[186px] rounded-xl cursor-pointer border-2 border-[#E1E3EA]"
+            className="flex col-span-1 max-mini:w-full hover:border-[#FF4306] duration-200 font-semibold text-sm items-center justify-center gap-2 h-11 w-[186px] rounded-xl cursor-pointer border-2 border-[#E1E3EA]"
           >
             <Image
               src="/svg/external-link.svg"
@@ -57,7 +57,7 @@ export default function Page() {
           </button>
           <button
             type="button"
-            className="flex hover:border-[#FF4306] duration-200 font-semibold text-sm items-center justify-center gap-2 h-11 w-[186px] rounded-xl cursor-pointer border-2 border-[#E1E3EA]"
+            className="flex col-span-1 max-mini:w-full hover:border-[#FF4306] duration-200 font-semibold text-sm items-center justify-center gap-2 h-11 w-[186px] rounded-xl cursor-pointer border-2 border-[#E1E3EA]"
           >
             <Image
               src="/svg/share.svg"
@@ -68,7 +68,7 @@ export default function Page() {
             Share
           </button>
         </div>
-        <p className="font-medium leading-8 text-base text-black/70">
+        <p className="font-medium max-mini:text-sm leading-8 text-base text-black/70">
           CrossPostingPal is your all-in-one solution for simplifying content
           sharing and scheduling across multiple social platforms. Tired of the
           repetitive process of posting separately to Bluesky, Twitter,
@@ -92,7 +92,7 @@ export default function Page() {
         </p>
         <Comments />
       </div>
-      <div className="min-w-[295px] w-[295px]">
+      <div className="min-w-[295px] max-tablet:min-w-0 max-tablet:w-full w-[295px]">
         <div className="w-full mb-6 border border-[#E4E4F6] rounded-xl p-6">
           <h4 className="font-semibold text-xs text-primary-color mb-3.5">
             Publisher
@@ -101,7 +101,7 @@ export default function Page() {
             <div className="w-8 h-8 rounded-full bg-[#D9D9D9]" />
             <Link
               href="#"
-              className="text-base font-semibold text-black underline"
+              className="text-base max-mini:text-sm font-semibold text-black underline"
             >
               Johnathan Doe
             </Link>
@@ -118,12 +118,12 @@ export default function Page() {
           <h4 className="font-semibold text-xs text-primary-color mb-3.5">
             Upvoted by
           </h4>
-          <div className="w-full grid grid-cols-6 gap-1.5">
+          <div className="w-full flex flex-wrap gap-1.5">
             {upvoters.map((voter, index) => (
               <Link href="#" key={index} className="col-span-1">
                 <div
                   className={cn(
-                    "w-full h-9 bg-gray-100 hover:opacity-80 rounded-full flex justify-center items-center"
+                    "w-9 h-9 bg-gray-100 hover:opacity-80 rounded-full flex justify-center items-center"
                   )}
                 >
                   <h4 className="text-gray-700 text-sm font-medium">{voter}</h4>

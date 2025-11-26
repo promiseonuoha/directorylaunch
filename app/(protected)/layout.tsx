@@ -7,7 +7,7 @@ export default function ProtectedLayout({
 }>) {
   return (
     <NewToolProvider>
-      <div className="w-full pt-[60px] pb-8 flex flex-col items-center">
+      <div className="w-full max-mobile:pt-8 pt-[60px] pb-8 flex flex-col items-center">
         {children}
       </div>
     </NewToolProvider>

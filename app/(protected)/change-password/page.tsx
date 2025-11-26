@@ -26,7 +26,9 @@ export default function Form() {
       className="w-full max-w-[1000px] h-max flex flex-col"
     >
       <div className="w-full flex flex-col gap-6">
-        <h1 className="font-semibold text-xl">Change Password</h1>
+        <h1 className="font-semibold max-mobile:text-lg text-xl">
+          Change Password
+        </h1>
 
         <div className="w-full grid max-mobile:grid-cols-1 max-mobile:gap-3 grid-cols-2 gap-8">
           <InputGroup

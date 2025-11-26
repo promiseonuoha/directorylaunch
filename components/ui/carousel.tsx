@@ -61,7 +61,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[480px] h-[270px] mx-[3vmin] z-10 "
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out max-mobile:w-[300px] w-[480px] max-mobile:h-[180px] h-[270px] mx-[3vmin] z-10 "
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -112,13 +112,13 @@ const CarouselControl = ({
 }: CarouselControlProps) => {
   return (
     <button
-      className={`w-10 h-10 cursor-pointer flex items-center mx-2 justify-center bg-white dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-primary-color focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
+      className={`w-10 max-mobile:w-8 max-mobile:h-8 h-10 cursor-pointer flex items-center mx-2 justify-center bg-white dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-primary-color focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
         type === "previous" ? "rotate-180" : ""
       }`}
       title={title}
       onClick={handleClick}
     >
-      <IconArrowNarrowRight className="text-neutral-600 dark:text-neutral-200" />
+      <IconArrowNarrowRight className="text-neutral-600 max-mobile:w-4 dark:text-neutral-200" />
     </button>
   );
 };
@@ -150,13 +150,13 @@ export default function Carousel({ slides }: CarouselProps) {
 
   return (
     <div
-      className="relative w-full h-[270px] mx-auto"
+      className="relative w-full max-mobile:h-[180px] h-[270px] mx-auto"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
         className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
         style={{
-          transform: `translateX(-${current * (100 / (slides.length + 1))}%)`,
+          transform: `translateX(-${current * (100 / slides.length)}%)`,
         }}
       >
         {slides.map((slide, index) => (

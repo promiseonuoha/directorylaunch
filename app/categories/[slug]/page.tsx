@@ -18,15 +18,16 @@ export default async function Page({ params }: PageProps) {
   const category = categories.find((c) => c.slug === slug);
 
   return (
-    <div className="w-full pt-[60px] pb-[90px] flex flex-col items-center">
-      <h1 className="font-semibold text-[28px] text-center mb-3">
+    <div className="w-full max-mobile:pt-8 max-mobile:pb-0 pt-[60px] pb-[90px] flex flex-col items-center">
+      <h1 className="font-semibold max-mobile:text-xl text-[28px] text-center mb-3">
         {category?.title}
       </h1>
-      <p className="text-center font-medium text-base text-black/70">
+      <p className="text-center max-mobile:text-sm font-medium text-base text-black/70">
         {category?.description}
       </p>
       <InputGroup className="mt-4 max-w-[800px] h-12 mb-12 rounded-2xl border-gray-100 bg-white shadow-none">
         <InputGroupInput
+          className="max-mobile:text-sm"
           placeholder={`Search products in ${category?.title}`}
         />
         <InputGroupAddon>

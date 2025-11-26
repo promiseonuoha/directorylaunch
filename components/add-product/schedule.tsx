@@ -47,10 +47,12 @@ export default function Schedule() {
   if (!newTool) return null;
 
   return (
-    <div className="w-full max-w-[1000px] flex flex-col pb-20">
+    <div className="w-full max-w-[1000px] flex flex-col max-mobile:pb-0 pb-20">
       <div className="flex flex-col gap-1 mb-6">
-        <h1 className="font-semibold text-2xl">Select your launch week</h1>
-        <p className="text-base text-gray-500 font-medium">
+        <h1 className="font-semibold max-mobile:text-lg text-2xl">
+          Select your launch week
+        </h1>
+        <p className="text-base max-mobile:text-sm text-gray-500 font-medium">
           Products are launched weekly. Only 10 slots per week.
         </p>
       </div>

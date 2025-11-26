@@ -8,15 +8,15 @@ export default function Page() {
   const [email, setEmail] = useState("");
 
   return (
-    <div className="pt-[60px] pb-[90px] flex flex-col items-center">
-      <h1 className="font-semibold text-[28px] text-center mb-3">
+    <div className="pt-[60px] max-mobile:pt-10 max-mobile:pb-7 pb-[90px] flex flex-col items-center">
+      <h1 className="font-semibold max-mobile:text-xl text-[28px] text-center mb-3">
         Forgot Password
       </h1>
-      <p className="text-center font-medium text-base text-black/70 mb-12">
+      <p className="text-center max-mobile:text-sm max-mobile:mb-7 font-medium text-base text-black/70 mb-12">
         Please enter your email address.
       </p>
 
-      <div className="w-[405px] mt-8 flex flex-col">
+      <div className="w-[405px] max-w-full max-mobile:px-3 max-mobile:mt-5 mt-8 flex flex-col">
         <div className="w-full flex flex-col gap-8 mb-7">
           <InputGroup
             value={email}
